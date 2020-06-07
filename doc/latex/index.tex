@@ -1,0 +1,97 @@
+\hypertarget{index_autotoc_md0}{}\doxysection{Git2\+Graphviz}\label{index_autotoc_md0}
+\mbox{\hyperlink{classGit2Graphviz}{Git2\+Graphviz}} creates a graphviz file representing the history of a Git repository.
+
+Look how easy it is to use\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ ./git2graphviz 'https://github.com/fador/mineserver' mineserver.gv}
+\end{DoxyCode}
+\hypertarget{index_autotoc_md1}{}\doxysubsection{Features}\label{index_autotoc_md1}
+
+\begin{DoxyItemize}
+\item Create graphviz file of repository history
+\item Option to specify start and end commits
+\end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysubsection{Installation}\label{index_autotoc_md2}
+\hypertarget{index_autotoc_md3}{}\doxysubsection{Dependencies}\label{index_autotoc_md3}
+
+\begin{DoxyItemize}
+\item \href{https://git-scm.com/}{\texttt{ git}} (tested with version 2.\+17.\+1)
+\item \href{https://github.com/libgit2/libgit2}{\texttt{ libgit2}} (tested with version 1.\+0.\+0)
+\item (libgit2 needs ssl, crypto and pthreads linked)
+\item \href{https://github.com/boostorg/graph}{\texttt{ boost/graph}} (tested with version 1.\+73.\+0)
+\end{DoxyItemize}\hypertarget{index_autotoc_md4}{}\doxysubsection{Installation}\label{index_autotoc_md4}
+\hypertarget{index_autotoc_md5}{}\doxysubsubsection{Windows 10}\label{index_autotoc_md5}
+
+\begin{DoxyEnumerate}
+\item install libgit2 (\href{https://bvisness.me/libgit2/}{\texttt{ good tutorial}})
+\item install boost/graph
+\item clone this repository
+\item link libgit2 and boost/graph to project
+\item Compile \mbox{\hyperlink{classGit2Graphviz}{Git2\+Graphviz}} using c++11 or greater
+\item Verify \mbox{\hyperlink{classGit2Graphviz}{Git2\+Graphviz}} was correctly installed by checking version 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ ./Code/Git2Graphviz/Debug/git2graphviz.exe -\/-\/version}
+\end{DoxyCode}
+
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md6}{}\doxysubsubsection{Linux/\+Ubuntu}\label{index_autotoc_md6}
+
+\begin{DoxyEnumerate}
+\item install libgit2 (\href{https://bvisness.me/libgit2/}{\texttt{ good tutorial}})
+\item install boost/graph
+\item clone this repository
+\item link libgit2 and boost/graph to project
+\item Compile \mbox{\hyperlink{classGit2Graphviz}{Git2\+Graphviz}} using c++11 or greater
+\item Verify \mbox{\hyperlink{classGit2Graphviz}{Git2\+Graphviz}} was correctly installed by checking version 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ ./Code/Git2Graphviz/Debug/git2graphviz.exe -\/-\/version}
+\end{DoxyCode}
+
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md7}{}\doxysubsubsection{Linux Install Notes}\label{index_autotoc_md7}
+
+\begin{DoxyItemize}
+\item boost/program\+\_\+options needs to be built
+\item build and install to dependents/install removing .so extension libs helped
+\item linking needed ssl, pthreads and crypto from path /usr/lib/x86\+\_\+64-\/linux-\/gnu
+\item adding Xlinker --verbose is useful for debuging where the library is found/not
+\end{DoxyItemize}\hypertarget{index_autotoc_md8}{}\doxysubsection{Contribute}\label{index_autotoc_md8}
+
+\begin{DoxyItemize}
+\item Issue Tracker\+: github.\+com/rozakiin/\+Git2\+Graphviz/issues
+\item Source Code\+: github.\+com/rozakiin/\+Git2\+Graphviz
+\end{DoxyItemize}\hypertarget{index_autotoc_md9}{}\doxysubsection{Usage}\label{index_autotoc_md9}
+\hypertarget{index_autotoc_md10}{}\doxysubsubsection{Arguments}\label{index_autotoc_md10}
+
+\begin{DoxyItemize}
+\item -\/r --repo repository local path
+\item -\/s --start start commit hash
+\item -\/e --end end commit hash
+\item -\/f --file path to file conatining list of commits to compare (W\+IP)
+\item -\/o --output output file name
+\item --help prints usage information
+\item --version prints version of program
+\item The output file name can be without argument
+\end{DoxyItemize}\hypertarget{index_autotoc_md11}{}\doxysubsection{Examples}\label{index_autotoc_md11}
+Create a dot file for the ground truth of \href{https://github.com/fador/mineserver}{\texttt{ mineserver}} repository save as mineserver.\+gv
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ ./git2graphviz -\/-\/repo './mineserver' mineserver.gv}
+\end{DoxyCode}
+
+
+Create a dot file for the ground truth of \href{https://github.com/fador/mineserver}{\texttt{ mineserver}} repository from commit 20c7 to 3671, save as mineserver20c73671.\+gv
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ ./git2graphviz -\/-\/repo './mineserver' -\/-\/start 20c7 -\/-\/end 3671 mineserver20c73671.gv}
+\end{DoxyCode}
+
+
+Generate pdf file of the ground truth using Graphviz 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ dot -\/Tpdf mineserver.gv -\/o mineserver.pdf}
+\end{DoxyCode}
+\hypertarget{index_autotoc_md12}{}\doxysubsection{Support}\label{index_autotoc_md12}
+If you are having issues, please let us know. Please email\+: \href{mailto:ruari.armstrong@uea.ac.uk}{\texttt{ ruari.\+armstrong@uea.\+ac.\+uk}}\hypertarget{index_autotoc_md13}{}\doxysubsection{License}\label{index_autotoc_md13}
+The project is licensed under the G\+NU General Public License v3.\+0. 

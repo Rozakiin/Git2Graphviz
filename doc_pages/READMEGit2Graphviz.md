@@ -1,3 +1,5 @@
+@mainpage
+
 Git2Graphviz
 ========
 

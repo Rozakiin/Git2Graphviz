@@ -1,0 +1,66 @@
+\hypertarget{classGit2Graphviz}{}\doxysection{Git2\+Graphviz Class Reference}
+\label{classGit2Graphviz}\index{Git2Graphviz@{Git2Graphviz}}
+
+
+Creates a Graphviz file representing a Git repository\textquotesingle{}s history.  
+
+
+
+
+{\ttfamily \#include $<$Git2\+Graphviz.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classGit2Graphviz_ae5a24da53893bb6b4f7bfdc01a6e11c6}{Make\+Ground\+Truth}} (std\+::string filename, std\+::string repo\+\_\+path, std\+::string start\+\_\+commit\+\_\+hash, std\+::string end\+\_\+commit\+\_\+hash)
+\begin{DoxyCompactList}\small\item\em Makes directed graph of repository history between start and end commits, if start and end commits are empty makes digraph of whole repository. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGit2Graphviz_ae501be3b61451d0075afc3c5a17ce25d}\label{classGit2Graphviz_ae501be3b61451d0075afc3c5a17ce25d}} 
+static constexpr double \mbox{\hyperlink{classGit2Graphviz_ae501be3b61451d0075afc3c5a17ce25d}{Version\+No}} = G\+I\+T2\+G\+R\+A\+P\+H\+V\+I\+Z\+\_\+\+V\+E\+R\+S\+I\+ON
+\begin{DoxyCompactList}\small\item\em a public variable to store the version number of the class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Creates a Graphviz file representing a Git repository\textquotesingle{}s history. 
+
+Definition at line 19 of file Git2\+Graphviz.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGit2Graphviz_ae5a24da53893bb6b4f7bfdc01a6e11c6}\label{classGit2Graphviz_ae5a24da53893bb6b4f7bfdc01a6e11c6}} 
+\index{Git2Graphviz@{Git2Graphviz}!MakeGroundTruth@{MakeGroundTruth}}
+\index{MakeGroundTruth@{MakeGroundTruth}!Git2Graphviz@{Git2Graphviz}}
+\doxysubsubsection{\texorpdfstring{MakeGroundTruth()}{MakeGroundTruth()}}
+{\footnotesize\ttfamily int Git2\+Graphviz\+::\+Make\+Ground\+Truth (\begin{DoxyParamCaption}\item[{std\+::string}]{filename,  }\item[{std\+::string}]{repo\+\_\+path,  }\item[{std\+::string}]{start\+\_\+commit\+\_\+hash,  }\item[{std\+::string}]{end\+\_\+commit\+\_\+hash }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Makes directed graph of repository history between start and end commits, if start and end commits are empty makes digraph of whole repository. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & filename for Graphviz output file \\
+\hline
+{\em repo\+\_\+path} & full path to repository directory \\
+\hline
+{\em start\+\_\+commit\+\_\+hash} & long hash value for the start commit \\
+\hline
+{\em end\+\_\+commit\+\_\+hash} & long hash value for the end commit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 success or an error code 
+\end{DoxyReturn}
+
+
+Definition at line 17 of file Git2\+Graphviz.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Git2\+Graphviz.\+h\item 
+Git2\+Graphviz.\+cpp\end{DoxyCompactItemize}

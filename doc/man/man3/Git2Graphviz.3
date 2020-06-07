@@ -1,0 +1,78 @@
+.TH "Git2Graphviz" 3 "Sun May 31 2020" "Version 1.0" "Git2Graphviz" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Git2Graphviz
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Git2Graphviz\&.h>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int \fBMakeGroundTruth\fP (std::string filename, std::string repo_path, std::string start_commit_hash, std::string end_commit_hash)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr double \fBVersionNo\fP = \fBGIT2GRAPHVIZ_VERSION\fP"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "int Git2Graphviz::MakeGroundTruth (std::string filename, std::string repo_path, std::string start_commit_hash, std::string end_commit_hash)\fC [static]\fP"
+init variables
+.PP
+init libgit
+.PP
+return if error initialising repo, print error
+.PP
+open repo
+.PP
+return if error opening repo, print error
+.PP
+create revision walker
+.PP
+return if error allocating new revision walker, print error
+.PP
+sort by chronological order
+.PP
+return if error changing sorting mode, print error
+.PP
+set range for walker
+.PP
+start from HEAD
+.PP
+return if error pushing range to walker, print error
+.PP
+walk the walk
+.PP
+get the current commit
+.PP
+return if error looking up commit, print error
+.PP
+add commit vertex
+.PP
+get number of parents for commit
+.PP
+add parent vertex
+.PP
+add commit:parent edge to graph
+.PP
+free the commit
+.PP
+clean up
+.PP
+return if error shutting down, print error
+.SH "Member Data Documentation"
+.PP 
+.SS "constexpr double Git2Graphviz::VersionNo = \fBGIT2GRAPHVIZ_VERSION\fP\fC [static]\fP, \fC [constexpr]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Git2Graphviz from the source code\&.
