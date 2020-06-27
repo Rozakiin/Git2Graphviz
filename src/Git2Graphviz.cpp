@@ -8,10 +8,10 @@
 
 #include <iostream>
 #include <map>
-#include "git2.h"
-#include "boost/graph/adjacency_list.hpp"
-#include "boost/graph/graphviz.hpp"
-#include "Git2Graphviz.h"
+#include "../lib/libgit2/include/git2.h"
+#include "../lib/boost/libs/graph/include/boost/graph/adjacency_list.hpp"
+#include "../lib/boost/libs/graph/include/boost/graph/graphviz.hpp"
+#include "Git2Graphviz.hpp"
 
 
 int Git2Graphviz::MakeGroundTruth(
