@@ -1,6 +1,6 @@
 [submodule "lib/boost"]
 	path = lib/boost
-	url = https://github.com/boostorg/boost.git
+	url = https://github.com/boostorg/boost/commit/62a4b7f40efbfe7a9b539edc14c508eb45e56e2d
 [submodule "lib/googletest"]
 	path = lib/googletest
 	url = https://github.com/google/googletest/commit/703bd9caab50b139428cea1aaff9974ebee5742e
