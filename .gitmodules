@@ -1,3 +1,0 @@
-[submodule "lib/libgit2"]
-	path = lib/libgit2
-	url = https://github.com/libgit2/libgit2/commit/0ced29612dacb67eefe0c562a5c1d3aab21cce96
