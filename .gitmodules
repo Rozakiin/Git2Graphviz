@@ -1,9 +1,9 @@
 [submodule "lib/libgit2"]
 	path = lib/libgit2
-	url = https://github.com/libgit2/libgit2.git
+	url = https://github.com/libgit2/libgit2/commit/0ced29612dacb67eefe0c562a5c1d3aab21cce96
 [submodule "lib/boost"]
 	path = lib/boost
-	url = https://github.com/boostorg/boost.git
+	url = https://github.com/boostorg/boost/commit/62a4b7f40efbfe7a9b539edc14c508eb45e56e2d
 [submodule "lib/googletest"]
 	path = lib/googletest
-	url = https://github.com/google/googletest.git
+	url = https://github.com/google/googletest/commit/703bd9caab50b139428cea1aaff9974ebee5742e
