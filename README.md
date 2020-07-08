@@ -36,6 +36,24 @@ Installation
 $ ./Code/Git2Graphviz/Debug/git2graphviz.exe --version
 ```
 
+Tested using MINGW64 (git Bash)
+
+1. Clone this repository
+2. libgit2 install (possibly not needed?)
+3. boost install
+31. cd lib/boost/tools/build
+32. ./bootstrap.bat 
+33. ./b2 --prefix=../../ install
+34. cd ../../
+35. ./bin/b2 --show-libraries (to test correct installation of b2)
+36. ./bin/b2 --with-program_options --with-graph --build-type=complete
+4. build using CMake
+41. 
+5. Verify Git2Graphviz was correctly installed by checking version
+```shell
+$ ./Code/Git2Graphviz/Debug/git2graphviz.exe --version
+```
+
 ### Linux/Ubuntu
 1. install libgit2 ([good tutorial](https://bvisness.me/libgit2/))
 2. install boost/graph
