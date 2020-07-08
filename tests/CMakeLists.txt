@@ -1,20 +1,17 @@
-cmake_minimum_required(VERSION 3.16)
-
-set(ThisProgram Git2GraphvizTests)
+project(Git2GraphvizTests VERSION 1.0)
 
 set(SOURCES
     Git2GraphvizTests.cpp
 )
 
-add_executable(Git2GraphvizTests Git2GraphvizTests.cpp)
+add_executable(${PROJECT_NAME} ${SOURCES})
 
-target_link_libraries(Git2GraphvizTests PUBLIC
+target_link_libraries(${PROJECT_NAME} PUBLIC
     gtest_main
-    Git2Graphviz
+    Git2GraphvizLibrary
 )
 
 add_test(
-    NAME Git2GraphvizTests
-    COMMAND Git2GraphvizTests
+    NAME ${PROJECT_NAME}
+    COMMAND ${PROJECT_NAME}
 )
-
