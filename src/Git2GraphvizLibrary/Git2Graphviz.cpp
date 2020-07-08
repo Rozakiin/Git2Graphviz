@@ -8,9 +8,9 @@
 
 #include <iostream>
 #include <map>
-#include "../lib/libgit2/include/git2.h"
-#include "../lib/boost/libs/graph/include/boost/graph/adjacency_list.hpp"
-#include "../lib/boost/libs/graph/include/boost/graph/graphviz.hpp"
+#include "git2.h"
+#include "boost/graph/adjacency_list.hpp"
+#include "boost/graph/graphviz.hpp"
 #include "Git2Graphviz.hpp"
 
 
@@ -32,7 +32,7 @@ int Git2Graphviz::MakeGroundTruth(
 	/* init variables */
 	std::string commithash;
 	std::string parenthash;
-	uint numparents;
+	unsigned int numparents;
 	int error;
 	Digraph g;
 	dynamic_properties dp;
@@ -138,7 +138,7 @@ int Git2Graphviz::MakeGroundTruth(
 		/* get number of parents for commit */
 		numparents = git_commit_parentcount(commit);
 
-		for (uint i = 0; i < numparents; i++)
+		for (unsigned int i = 0; i < numparents; i++)
 		{
 			/* add parent vertex */
 			parenthash = git_oid_tostr_s(git_commit_parent_id(commit, i));

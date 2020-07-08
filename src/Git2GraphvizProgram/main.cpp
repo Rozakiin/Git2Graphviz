@@ -6,12 +6,11 @@
 // * Description : Main file of Git2Graphviz.
 // *****************************************************************************
 
-#include "Git2Graphviz.h"
-
 #include <iostream>
 #include "boost/program_options.hpp"
 namespace po = boost::program_options;
 
+#include "Git2GraphvizLibrary/Git2Graphviz.hpp"
 
 /*******************************************************************************
  * main.
