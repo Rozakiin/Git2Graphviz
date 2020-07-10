@@ -15,7 +15,7 @@ cmake_minimum_required(VERSION 3.16)
 project(Git2Graphviz VERSION 1.0 LANGUAGES C CXX)
 
 set(CMAKE_C_STANDARD 99)
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_POSITION_IMDEPENDENT_CODE ON)
 set(CMAKE_VERBOSE_MAKEFILE TRUE)
 
@@ -24,6 +24,7 @@ include(cmake/PrintVariables.cmake)
 print_variables()
 
 enable_testing()
+
 # Build googletest
 add_subdirectory(lib/googletest)
 
