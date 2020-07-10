@@ -40,13 +40,7 @@ Tested using MINGW64 (git Bash)
 
 1. Clone this repository
 2. libgit2 install (possibly not needed?)
-3. boost install
-31. cd lib/boost/tools/build
-32. ./bootstrap.bat 
-33. ./b2 --prefix=../../ install
-34. cd ../../
-35. ./bin/b2 --show-libraries (to test correct installation of b2)
-36. ./bin/b2 --with-program_options --with-graph --build-type=complete
+3. ./scripts/install.bat
 4. build using CMake
 41. 
 5. Verify Git2Graphviz was correctly installed by checking version
