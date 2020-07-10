@@ -1,0 +1,7 @@
+{
+    "name": "Git2Graphviz",
+    "version": "1.0",
+    "repo": "https://github.com/Rozakiin/Git2Graphviz",
+    "description": "Git2Graphviz creates a graphviz file representing the history of a Git repository.",
+    "install": "mkdir build && cd build && cmake .. && cmake --build ."
+}
