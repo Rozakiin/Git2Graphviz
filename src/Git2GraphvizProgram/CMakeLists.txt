@@ -10,6 +10,10 @@ set(SOURCES
     main.cpp
 )
 
+message("Boost include directory is ${Boost_INCLUDE_DIR}")
+message("Boost library directory is ${Boost_LIBRARY_DIRS}")
+message("Boost libs are ${Boost_LIBRARIES}")
+
 if (Boost_FOUND)
     include_directories(${Boost_INCLUDE_DIR})
     link_directories(${Boost_LIBRARY_DIRS})
