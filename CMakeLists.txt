@@ -19,9 +19,9 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_POSITION_IMDEPENDENT_CODE ON)
 set(CMAKE_VERBOSE_MAKEFILE TRUE)
 
-include(cmake/PrintVariables.cmake)
+#include(cmake/PrintVariables.cmake)
 
-print_variables()
+#print_variables()
 
 enable_testing()
 
@@ -48,6 +48,7 @@ set(Boost_USE_STATIC_LIBS        ON)
 set(Boost_USE_MULTITHREADED      ON)
 set(Boost_USE_STATIC_RUNTIME     OFF)
 set(BOOST_ALL_DYN_LINK           OFF) # force dynamic linking for all libraries
+set(Boost_ARCHITECTURE           -x64)
 
 # Find Boost
 find_package(Boost 1.73 REQUIRED COMPONENTS graph program_options)
